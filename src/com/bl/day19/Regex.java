@@ -97,6 +97,19 @@ class UserRegistration {
 			System.out.println("enter valid password");
 		}
 	}
+
+	public void password4() {
+		// rule1 = minimum 8 characters & at least 1 upper case at least one numeric
+
+		System.out.print("Enter password  :: ");
+		String password = sc.nextLine();
+		boolean answer = Pattern.matches("[A-Z]+[a-z]+\\W[0-9]+", password);
+		if (answer) {
+			System.out.println("Thank you");
+		} else {
+			System.out.println("enter valid password");
+		}
+	}
 }
 
 public class Regex {
@@ -110,6 +123,7 @@ public class Regex {
 		user.password1();
 		user.password2();
 		user.password3();
+		user.password4();
 
 	}
 
