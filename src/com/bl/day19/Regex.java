@@ -110,6 +110,20 @@ class UserRegistration {
 			System.out.println("enter valid password");
 		}
 	}
+
+	public void emailValidation() {
+		// this is code for question 2 which satisfies for all emails given to check.
+
+		System.out.print("Enter email ID :: ");
+		String Email = sc.next();
+		Boolean answer = Pattern.matches("[a-zA-Z0-9_.]*[-]*[+]*[a-zA-Z0-9]*@[a-zA-Z0-9]+([.][a-zA-Z]+)+", Email);
+		if (answer) {
+			System.out.println("Thank you");
+		} else {
+			System.out.println("enter valid email");
+		}
+
+	}
 }
 
 public class Regex {
@@ -124,6 +138,7 @@ public class Regex {
 		user.password2();
 		user.password3();
 		user.password4();
+		user.emailValidation();
 
 	}
 
