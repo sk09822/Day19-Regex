@@ -44,6 +44,19 @@ class UserRegistration {
 		}
 
 	}
+
+	public void contactNumber() {
+
+		System.out.print("Enter contact number with country code (91)  :: ");
+		String ContactNumber = sc.next();
+		boolean answer = Pattern.matches("91\\s[0-9]{10}", ContactNumber);
+		if (answer) {
+			System.out.println("Thank you");
+		} else {
+			System.out.println("enter valid contact number");
+		}
+
+	}
 }
 
 public class Regex {
@@ -53,6 +66,7 @@ public class Regex {
 		user.firstName();
 		user.lastName();
 		user.email();
+		user.contactNumber();
 
 	}
 }
