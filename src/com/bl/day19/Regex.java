@@ -57,6 +57,19 @@ class UserRegistration {
 		}
 
 	}
+
+	public void password1() {
+		// rule1 = minimum 8 characters
+
+		System.out.print("Enter password  :: ");
+		String password = sc.nextLine();
+		boolean answer = Pattern.matches("[a-zA-Z0-9]{8,}", password);
+		if (answer) {
+			System.out.println("Thank you");
+		} else {
+			System.out.println("enter valid password");
+		}
+	}
 }
 
 public class Regex {
@@ -67,6 +80,8 @@ public class Regex {
 		user.lastName();
 		user.email();
 		user.contactNumber();
+		user.password1();
 
 	}
+
 }
