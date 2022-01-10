@@ -31,6 +31,19 @@ class UserRegistration {
 		}
 
 	}
+
+	public void email() {
+
+		System.out.print("Enter email ID :: ");
+		String Email = sc.next();
+		Boolean answer = Pattern.matches("[a-z]+([.][a-z]+)*@bl[.]co([.]in)*", Email);
+		if (answer) {
+			System.out.println("thank you");
+		} else {
+			System.out.println("please enter valid email ID ");
+		}
+
+	}
 }
 
 public class Regex {
@@ -39,7 +52,7 @@ public class Regex {
 		UserRegistration user = new UserRegistration();
 		user.firstName();
 		user.lastName();
+		user.email();
 
 	}
-
 }
